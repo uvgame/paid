@@ -1,0 +1,197 @@
+local https = game:GetService("HttpService");
+
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Title = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+local Keybox = Instance.new("Frame")
+local Key = Instance.new("TextBox")
+local UICorner_2 = Instance.new("UICorner")
+local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
+local Submit = Instance.new("Frame")
+local Subutton = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+Frame.Position = UDim2.new(0.5, 0, 0.5, 0)
+Frame.Size = UDim2.new(0.638610065, 0, 0.542691767, 0)
+
+UICorner.CornerRadius = UDim.new(0.100000001, 8)
+UICorner.Parent = Frame
+
+Title.Name = "Title"
+Title.Parent = Frame
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(0.348246664, 0, 0, 0)
+Title.Size = UDim2.new(0.302297443, 0, 0.167999998, 0)
+
+TextLabel.Parent = Title
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Size = UDim2.new(1, 0, 1, 0)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Visurus Key"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 61.000
+TextLabel.TextWrapped = true
+
+UITextSizeConstraint.Parent = TextLabel
+UITextSizeConstraint.MaxTextSize = 61
+
+Keybox.Name = "Keybox"
+Keybox.Parent = Frame
+Keybox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Keybox.BackgroundTransparency = 1.000
+Keybox.Position = UDim2.new(0.270302355, 0, 0.378666639, 0)
+Keybox.Size = UDim2.new(0.458282918, 0, 0.239999995, 0)
+
+Key.Name = "Key"
+Key.Parent = Keybox
+Key.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
+Key.Size = UDim2.new(1, 0, 1, 0)
+Key.Font = Enum.Font.SourceSans
+Key.PlaceholderText = "Key"
+Key.Text = ""
+Key.TextColor3 = Color3.fromRGB(0, 0, 0)
+Key.TextScaled = true
+Key.TextSize = 66.000
+Key.TextWrapped = true
+
+UICorner_2.Parent = Key
+
+UITextSizeConstraint_2.Parent = Key
+UITextSizeConstraint_2.MaxTextSize = 66
+
+Submit.Name = "Submit"
+Submit.Parent = Frame
+Submit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Submit.BackgroundTransparency = 1.000
+Submit.Position = UDim2.new(0.269649327, 0, 0.656000018, 0)
+Submit.Size = UDim2.new(0.458282918, 0, 0.266666681, 0)
+
+Subutton.Name = "Subutton"
+Subutton.Parent = Submit
+Subutton.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+Subutton.Size = UDim2.new(1, 0, 0.99999994, 0)
+Subutton.Font = Enum.Font.SourceSans
+Subutton.Text = "Submit key"
+Subutton.TextColor3 = Color3.fromRGB(170, 170, 170)
+Subutton.TextScaled = true
+Subutton.TextSize = 53.000
+Subutton.TextWrapped = true
+
+UICorner_3.Parent = Subutton
+
+UITextSizeConstraint_3.Parent = Subutton
+UITextSizeConstraint_3.MaxTextSize = 53
+
+UIAspectRatioConstraint.Parent = Frame
+UIAspectRatioConstraint.AspectRatio = 2.205
+
+-- Scripts:
+
+local function NPDRA_fake_script() -- TextLabel.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel)
+
+	local text = script.Parent
+	local add = 10
+	wait(1)
+	local k = 1
+	while k <= 255 do
+		text.TextColor3 = Color3.new(k/255,0/255,0/255)
+		k = k + add
+		wait()
+	end
+	while true do
+		k = 1
+		while k <= 255 do
+			text.TextColor3 = Color3.new(255/255,k/255,0/255)
+			k = k + add
+			wait()
+		end
+		k = 1
+		while k <= 255 do
+			text.TextColor3 = Color3.new(255/255 - k/255,255/255,0/255)
+			k = k + add
+			wait()
+		end
+		k = 1
+		while k <= 255 do
+			text.TextColor3 = Color3.new(0/255,255/255,k/255)
+			k = k + add
+			wait()
+		end
+		k = 1
+		while k <= 255 do
+			text.TextColor3 = Color3.new(0/255,255/255 - k/255,255/255)
+			k = k + add
+			wait()
+		end
+		k = 1
+		while k <= 255 do
+			text.TextColor3 = Color3.new(k/255,0/255,255/255)
+			k = k + add
+			wait()
+		end
+		k = 1
+		while k <= 255 do
+			text.TextColor3 = Color3.new(255/255,0/255,255/255 - k/255)
+			k = k + add
+			wait()
+		end
+		while k <= 255 do
+			text.TextColor3 = Color3.new(255/255 - k/255,0/255,0/255)
+			k = k + add
+			wait()
+		end
+	end
+end
+coroutine.wrap(NPDRA_fake_script)()
+local function QXIGMUE_fake_script() -- Subutton.LocalScript 
+	local script = Instance.new('LocalScript', Subutton)
+
+	local sub = script.Parent
+	
+	sub.MouseButton1Click:Connect(function()
+		local key = script.Parent.Parent.Parent.Keybox.Key.Text
+		
+		local success, response = pcall(function()
+            serverResponce = https:JSONDecode(game:HttpGet('https://bloxybin.com/api/v1/paste/key?token=' .. key))
+        end)
+		
+		if success then
+		    if serverResponce.payload.key == key then
+    			sub.BackgroundColor3 = Color3.fromRGB(0, 158, 0)
+    			sub.Text = "Correct"
+    			task.wait(1.5)
+    			loadstring(game:HttpGet(https://raw.githubusercontent.com/dogefriendyt/xubs-script/main/paid/ISGGB-0001, true))()
+    			sub.Parent.Parent.Parent:Destroy()
+    		end
+		else
+			sub.BackgroundColor3 = Color3.fromRGB(131, 14, 14)
+			sub.Text = "Incorrect Key"
+			task.wait(1.5)
+			sub.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+			sub.Text = "Submit key"
+		end
+	end)
+end
+coroutine.wrap(QXIGMUE_fake_script)()
